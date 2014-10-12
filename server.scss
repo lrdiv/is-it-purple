@@ -1,0 +1,51 @@
+
+$minHue: 265deg;
+$maxHue: 310deg;
+$minSat: 5%;
+$minLight: 20%;
+
+@function is-purple-hue($hue, $min, $max) {
+  @if ( $hue >= $min ) and ( $hue <= $max ) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+@function is-purple-saturation($sat, $min) {
+  @if ( $sat >= $min ) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+@function is-purple-lightness($light, $min) {
+  @if ( $light >= $min ) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+@function is-purple($hex) {
+  $hue: hue($hex);
+  $sat: saturation($hex);
+  $light: lightness($hex);
+
+  @if is-purple-hue($hue, $minHue, $maxHue) == true {
+    @if is-purple-saturation($sat, $minSat) == true {
+      @if is-purple-lightness($light, $minLight) == true {
+        @return true;
+      } @else {
+        @return "Too dark.";
+      }
+    } @else {
+      @return "Too saturated.";
+    }
+  } @else {
+    @return "Not even close.";
+  }
+}
+
+* { purple: is-purple($purple); }
