@@ -33,15 +33,11 @@ $minLight: 20%;
   $sat: saturation($hex);
   $light: lightness($hex);
 
-  @if is-purple-hue($hue, $minHue, $maxHue) == true {
-    @if is-purple-saturation($sat, $minSat) == true {
-      @if is-purple-lightness($light, $minLight) == true {
-        @return true;
-      }
-    }
+  @if is-purple-hue($hue, $minHue, $maxHue) == true and
+  is-purple-saturation($sat, $minSat) == true and
+  is-purple-lightness($light, $minLight) == true {
+    @return true;
   }
-
-  @return false;
 }
 
 * { purple: is-purple($purple); }
