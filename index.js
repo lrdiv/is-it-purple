@@ -12,7 +12,7 @@ if ( process.argv.length > 2 ) {
 }
 
 // Read our sass file
-sassFile = fs.readFile('server.scss', 'utf8', function(err, data) {
+sassFile = fs.readFile('scss/purpulate.scss', 'utf8', function(err, data) {
   if (err) return console.log(err);
 
   // Prepend our sass file with the purple hex code.
@@ -29,7 +29,7 @@ sassFile = fs.readFile('server.scss', 'utf8', function(err, data) {
       return console.log(res);
     },
     error: function(err) {
-      return console.log("We couldn't parse your purple!");
+      return console.error("We couldn't parse your purple!");
     }
   });
 
