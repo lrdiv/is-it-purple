@@ -18,14 +18,14 @@ Hex codes should not be prepended with the hash / hashtag / pound sign / whateve
 
 ### Example:
 
-`$ node server.js 881d86`
+`$ node index.js 881d86`
 
 `=> true`
 
-`$ node server.js 001010`
+`$ node index.js 001010`
 
 `=> false`
 
-`$ node server.js InvalidHexCode`
+`$ node index.js InvalidHexCode`
 
 `=> "We couldn't parse your purple."`
