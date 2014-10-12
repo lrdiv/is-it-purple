@@ -37,15 +37,11 @@ $minLight: 20%;
     @if is-purple-saturation($sat, $minSat) == true {
       @if is-purple-lightness($light, $minLight) == true {
         @return true;
-      } @else {
-        @return "Too dark.";
       }
-    } @else {
-      @return "Too saturated.";
     }
-  } @else {
-    @return "Not even close.";
   }
+
+  @return false;
 }
 
 * { purple: is-purple($purple); }
