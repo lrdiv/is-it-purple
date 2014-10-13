@@ -10,22 +10,13 @@ Through science, maths, magic, and Sass, we now have the answer.
 Usage
 -----
 1. `git clone https://github.com/lrdiv/is-it-purple.js.git`
-2. `cd is-it-purple.js` (or whatever you named the directory)
-3. `node server.js {{hex code}}`
+2. `var purple = require('is-it-purple');`
+3. `var isPurple = purple.isPurple("00FF00");`
 
 ### Note:
 Hex codes should not be prepended with the hash / hashtag / pound sign / whatever.
 
-### Example:
-
-`$ node index.js 881d86`
-
-`=> true`
-
-`$ node index.js 001010`
-
-`=> false`
-
-`$ node index.js InvalidHexCode`
-
-`=> "We couldn't parse your purple."`
+### TODO:
+- Better validation of hex codes. Accept 3 character strings. Accept strings with or without hash.
+- Better error handling.
+- Support check by array of rgb values.
