@@ -9,7 +9,7 @@ Through science, maths, magic, and Sass, we now have the answer.
 
 Usage
 -----
-1. `git clone https://github.com/lrdiv/is-it-purple.js.git`
+1. `npm install is-it-purple`
 2. `var purple = require('is-it-purple');`
 3. `var isPurple = purple.isPurple("00FF00");`
 
