@@ -1,5 +1,5 @@
-is-it-purple.js
-===============
+is-it-purple
+============
 
 Since our ancestors first began drawing stick figures on the walls of their caves, man has been plagued by one question:
 
@@ -9,12 +9,19 @@ Through science, maths, magic, and science, we now have the answer.
 
 Usage
 -----
-1. `npm install is-it-purple`
-2. `var purple = require('is-it-purple');`
-3. `var isPurple = purple.isPurple("00FF00");`
+#### In your terminal:
+
+`npm install is-it-purple`
+
+#### In your project:
+
+```javascript
+var purple = require('is-it-purple');
+var isPurple = purple.isPurple("#00FF00");
+```
 
 ### Note:
-Hex codes should not be prepended with the hash / hashtag / pound sign / whatever.
+Hex codes should be a **string prepended with the hash / hashtag / pound sign / whatever.
 
 ### TODO:
 - Better validation of hex codes. Accept 3 character strings. Accept strings with or without hash.
