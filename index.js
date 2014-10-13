@@ -46,6 +46,7 @@ module.exports = {
 
         case b:
           h = (r - g) / d + 4;
+          break;
       }
 
       h /= 6;
