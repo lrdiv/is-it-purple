@@ -5,7 +5,7 @@ Since our ancestors first began drawing stick figures on the walls of their cave
 
 **"Is this color considered purple?"**
 
-Through science, maths, magic, and Sass, we now have the answer.
+Through science, maths, magic, and science, we now have the answer.
 
 Usage
 -----
