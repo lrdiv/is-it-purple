@@ -21,7 +21,7 @@ var isPurple = purple.isPurple("#00FF00");
 ```
 
 ### Note:
-Hex codes should be a **string prepended with the hash / hashtag / pound sign / whatever.
+Hex codes should be a string prepended with the hash / hashtag / pound sign / whatever.
 
 ### TODO:
 - Better validation of hex codes. Accept 3 character strings. Accept strings with or without hash.
