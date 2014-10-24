@@ -21,9 +21,11 @@ var isPurple = purple.isPurple("#00FF00");
 ```
 
 ### Note:
-Hex codes should be a string prepended with the hash / hashtag / pound sign / whatever.
+The `isPurple` function can accept the following inputs:
+- A string containing a hex code prepended with `#`, eg: "#816687"
+- A string containing a hex code not prepended with `#`, eg: "816687"
+- A string containing comma-separated RGB values, eg: "129, 102, 135"
+- An array containing RGB values, eg: [129, 102, 135]
 
 ### TODO:
-- Better validation of hex codes. Accept 3 character strings. Accept strings with or without hash.
-- Better error handling.
-- Support check by array of rgb values.
+- Accept 3 character strings.
