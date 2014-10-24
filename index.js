@@ -8,10 +8,30 @@ module.exports = {
   minSat: 0.05,
   minLight: 0.2,
 
-  convertToRGB: function(hex) {
-    var r = parseInt(hex.substr(1,2), 16);
-    var g = parseInt(hex.substr(3,2), 16);
-    var b = parseInt(hex.substr(5,2), 16);
+  convertToRGB: function(input) {
+    var rgb;
+
+    if (input instanceof Array && input.length == 3) {
+      return input;
+    } 
+
+    if (input.split(',').length == 3) {
+      return input.split(',').map(function(item) {
+        return parseInt(item);
+      });
+    } 
+
+    if (input.length == 6 && input.indexOf('#') != 0) {
+      input = "#" + input;
+    }
+
+    if (input.length != 7 || input.indexOf('#') != 0) {
+      return false;
+    }
+
+    var r = parseInt(input.substr(1,2), 16);
+    var g = parseInt(input.substr(3,2), 16);
+    var b = parseInt(input.substr(5,2), 16);
     return [r, g, b];
   },
 
@@ -57,6 +77,8 @@ module.exports = {
 
   isPurple: function(hex) {
     var rgb = this.convertToRGB(hex);
+    if (!rgb) return false
+
     var hsl = this.convertToHSL(rgb);
 
     var h = hsl[0] * 360;
