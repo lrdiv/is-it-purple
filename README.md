@@ -22,10 +22,10 @@ var isPurple = purple.isPurple("#00FF00");
 
 ### Note:
 The `isPurple` function can accept the following inputs:
-- A string containing a hex code prepended with `#`, eg: "#816687"
-- A string containing a hex code not prepended with `#`, eg: "816687"
-- A string containing comma-separated RGB values, eg: "129, 102, 135"
-- An array containing RGB values, eg: [129, 102, 135]
+- A string containing a hex code prepended with `#`, eg: `"#816687"`
+- A string containing a hex code not prepended with `#`, eg: `"816687"`
+- A string containing comma-separated RGB values, eg: `"129, 102, 135"`
+- An array containing RGB values, eg: `[129, 102, 135]`
 
 ### TODO:
 - Accept 3 character strings.
