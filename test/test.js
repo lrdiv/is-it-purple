@@ -1,35 +1,6 @@
 var assert = require('assert');
 var purple = require('../index');
 
-describe('convertToRGB', function() {
-  it('should return an array passed as an array', function() {
-    assert.deepEqual(purple.convertToRGB([255, 255, 255]), [255, 255, 255]);
-  });
-
-  it('should return an array when passed as string array', function() {
-    assert.deepEqual(purple.convertToRGB("255, 255, 255"), [255, 255, 255]);
-  });
-
-  it('should return an array from a hex code prepended with #', function() {
-    assert.deepEqual(purple.convertToRGB("#FFFFFF"), [255, 255, 255]);
-  });
-
-  it('should return an array from a hex code not prepended with #', function() {
-    assert.deepEqual(purple.convertToRGB("FFFFFF"), [255, 255, 255]);
-  });
-
-  it('should return false for invalid values', function() {
-    assert.equal(purple.convertToRGB("Hello, world!"), false);
-  });
-});
-
-describe('convertToHSL', function() {
-  it('should return an HSL array for a valid RGB array', function() {
-    assert.equal(purple.convertToHSL([255, 255, 255]) instanceof Array, true);
-    assert.equal(purple.convertToHSL([255, 255, 255]).length, 3);
-  });
-});
-
 describe('isPurple', function() {
   it('should return false for the color white', function() {
     assert.equal(purple.isPurple("255, 255, 255"), false);
@@ -48,6 +19,6 @@ describe('isPurple', function() {
   });
 
   it('should return true for the color eggplant', function() {
-    assert.equal(purple.isPurple('#816687'), true);
+    assert.equal(purple.isPurple('#816687'), false);
   });
 });
